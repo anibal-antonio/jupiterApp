@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4" >
+
+    <form class="form-signin" name="add">
+            <img width="1000" height="300" src="https://angular.io/assets/images/logos/angular/logo-nav@1x.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Nome</label>
+            <input type="text" name="name" [(ngModel)] = "data.name" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Profissão</label>
+            <input type="text" id="inputPassword" name="job" [(ngModel)] = "data.job" class="form-control" placeholder="Password" required>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="edit(data)">Adicionar</button>
+      </form>
+
+      <div class="res" *ngIf="showMessage === true">
+        <small class="green">Registro alterado com sucesso</small>
+        <p><strong>Nome:</strong> {{data.name}}</p>
+        <p><strong>Trabalho:</strong> {{data.job}}</p>
+      </div>
+
+      </div>
+    </div>
+  </div>

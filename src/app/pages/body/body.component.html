@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+      <div class="col-4" *ngFor="let p of post">
+        <div class="card" style="width: 18rem;">
+            <img src="{{p.avatar}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{p.first_name}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="/edit/{{p.id}}" class="btn">Editar</a>
+              <b></b>
+              <a href="/view/{{p.id}}" class="btn text-primary">Ver</a>
+              <button (click)="delete(p.id)" class="btn text-danger">Apagar</button>
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <button class="btn btn-large btn-primary load" (click)="loadMore()" *ngIf="load === true" >
+      Carregar Mais
+    </button>
+  </div>
